@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class CarreraGalgosImplements implements Runnable {
@@ -48,7 +47,7 @@ public class CarreraGalgosImplements implements Runnable {
 		for(CarreraGalgosImplements item: listaGalgos) {
 			new Thread(item).start();
 		}
-		
+		scanner.close();
 	}
 	 
 	

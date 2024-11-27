@@ -1,6 +1,4 @@
 	import java.util.ArrayList;
-	import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class CarreraGalgosExtends extends Thread {
@@ -46,6 +44,8 @@ public class CarreraGalgosExtends extends Thread {
 	        for (CarreraGalgosExtends galgo : listaGalgos) {
 	            galgo.start();
 	        }
+	        scanner.close();
+	      
 	    }
 	}
 
