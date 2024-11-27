@@ -7,13 +7,13 @@ public class Perro extends Thread{
 	private int idPerro;
 	private int aguaBebida;
 	private int tiempoBebiendo;
-	private static int contador;
+	private static int contador = 0;
 	
 	public Perro (int tiempoBebiendo) {
 		contador ++;
 		idPerro = contador;
 		this.tiempoBebiendo = tiempoBebiendo;
-		aguaBebida = tiempoBebiendo;
+		this.aguaBebida = tiempoBebiendo;
 	}
 	
 	@Override
@@ -69,6 +69,4 @@ public class Perro extends Thread{
 	public static void setContador(int contador) {
 		Perro.contador = contador;
 	}
-	
-
 }

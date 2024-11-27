@@ -11,8 +11,10 @@ public class Bebedero {
 	}
 	
 	public void calculaAgua() {
+		
 		for(int i = 0; i<((Math.random()*20)+1); i++){
-			perro = new Perro((int) (Math.random()*10+1));
+			int tiempoBebiendo= (int) ((Math.random()*10)+1);
+			Perro perro = new Perro(tiempoBebiendo);
 			listaPerros.add(perro);
 		}
 	}
@@ -33,7 +35,7 @@ public class Bebedero {
 		for(Perro perro : listaPerros) {
 			aguaAcumulada += perro.getAguaBebida();
 		}
-		System.out.printf("Han bebido %d perros.\n", perro.getContador());
+		System.out.printf("Han bebido %d perros.\n", Perro.getContador());
 		System.out.printf("Los perros han bebido un total de: %d litros.\n", aguaAcumulada);
 	}
 	
