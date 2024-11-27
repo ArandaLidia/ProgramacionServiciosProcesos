@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 public class Perro extends Thread{
 	private static Semaphore semaforo = new Semaphore(3);
 	private int idPerro;
-	private static int aguaBebida;
+	private int aguaBebida;
 	private int tiempoBebiendo;
 	private static int contador;
 	
@@ -46,12 +46,12 @@ public class Perro extends Thread{
 		this.idPerro = idPerro;
 	}
 
-	public static int getAguaBebida() {
+	public int getAguaBebida() {
 		return aguaBebida;
 	}
 
-	public static void setAguaBebida(int aguaBebida) {
-		Perro.aguaBebida = aguaBebida;
+	public void setAguaBebida(int aguaBebida) {
+		this.aguaBebida = aguaBebida;
 	}
 
 	public int getTiempoBebiendo() {
