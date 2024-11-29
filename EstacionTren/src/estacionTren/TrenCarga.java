@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 public class TrenCarga extends Thread {
     
     // Semáforos para controlar el acceso a la estación y a la vía de carga.
-    private static Semaphore semaforoEstacion = ControladorEstacion.semaforoEstacion;
+    private static Semaphore semaforoEstacion = ControladorEstacion.getSemaforoestacion();
     private static Semaphore semaforoTrenCarga = new Semaphore(2);
     private static int contadortrenCarga = 0; // Contador de trenes de carga.
     private int idTrenCarga; // ID único del tren de carga.

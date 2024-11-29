@@ -6,9 +6,21 @@ import java.util.concurrent.Semaphore;
 public class ControladorEstacion {
 
     // Semáforo que regula el acceso a la estación. Permite un máximo de 5 trenes a la vez.
-    public static final Semaphore semaforoEstacion = new Semaphore(5);
+    private static final Semaphore semaforoEstacion = new Semaphore(5);
 
-    // Lista para almacenar los trenes creados, tanto de carga como de pasajeros.
+    public ArrayList<Thread> getListaTrenes() {
+		return listaTrenes;
+	}
+
+	public void setListaTrenes(ArrayList<Thread> listaTrenes) {
+		this.listaTrenes = listaTrenes;
+	}
+
+	public static Semaphore getSemaforoestacion() {
+		return semaforoEstacion;
+	}
+
+	// Lista para almacenar los trenes creados, tanto de carga como de pasajeros.
     private ArrayList<Thread> listaTrenes;
 
     // Constructor: Inicializa la lista de trenes.

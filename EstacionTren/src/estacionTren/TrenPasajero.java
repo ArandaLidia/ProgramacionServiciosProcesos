@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class TrenPasajero extends Thread {
     // Semáforos para controlar el acceso a la estación y a la vía de pasajeros.
-    private static Semaphore semaforoEstacion = ControladorEstacion.semaforoEstacion;
+    private static Semaphore semaforoEstacion = ControladorEstacion.getSemaforoestacion();
     private static Semaphore semaforoTrenPasajero = new Semaphore(4);
     private static int contadorTrenPasajero = 0; // Contador de trenes de pasajeros.
     private int idTrenPasajero; // ID único del tren de pasajero.
